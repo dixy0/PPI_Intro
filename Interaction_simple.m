@@ -1,5 +1,6 @@
 % This MATLAB script is to introduce the basic concepts of
 % psychophysiological interaction (PPI) of functional MRI (fMRI) data
+% Author: Xin Di, PhD
 
 % Part 1 simple correlation
 % Generate simulated variables
@@ -32,7 +33,7 @@ figure; scatter(x_iq,y_volume,25,gender,'filled');
 
 
 % Part3 Different methods to examine correlation (slope) differences 
-design_matrix1 = [[x_iq_male;zeros(100,1)],[zeros(100,1);x_iq_female],gender]; % omited constant term because regstats will be used
+design_matrix1 = [[x_iq_male;zeros(100,1)],[zeros(100,1);x_iq_female],gender]; % omitted constant term because regstats will be used
 design_matrix2 = [x_iq,gender,x_iq.*gender];
 
 figure; subplot(1,2,1);imagesc(design_matrix1)
