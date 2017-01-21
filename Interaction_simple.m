@@ -66,3 +66,31 @@ s = regstats(x2,design_matrix2);
 s = regstats(x2,design_matrix3);
 [s.tstat.t(4), s.tstat.pval(4)]
 
+
+% Part 5 different relationships between two groups
+% Generate simulated variables
+x_common = randn(100,1);  % A common signal that give rises to correlation
+x1_conA = randn(100,1);  % Simulated IQ
+x2_conA = randn(100,1);  % Simulated brain volume
+x1_conB = - x_common + randn(100,1);  % Simulated IQ
+x2_conB = x_common + randn(100,1);  % Simulated brain volume
+
+% concatenate male and female data as whole variables
+x1 = [x1_conA;x1_conB];
+x2 = [x2_conA;x2_conB];
+condition = [ones(100,1);zeros(100,1)];
+
+figure; scatter(x1,x2,25,condition,'filled');
+xlabel('x1');ylabel('x2');
+[r_conA,p_conA] = corr(x1_conA,x2_conA)
+[r_conB,p_conB] = corr(x1_conB,x2_conB)
+
+% Construct design matrix and run statistics
+design_matrix1 = [x1,condition,x1.*condition];
+design_matrix2 = [x1,condition,x1.*detrend(condition,'constant')];
+
+s = regstats(x2,design_matrix1);
+[s.tstat.t(4), s.tstat.pval(4)]
+
+s = regstats(x2,design_matrix2);
+[s.tstat.t(4), s.tstat.pval(4)]
