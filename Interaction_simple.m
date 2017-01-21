@@ -35,7 +35,7 @@ xlabel('x1');ylabel('x2');
 
 
 % Part3 Different methods to examine correlation (slope) differences 
-design_matrix1 = [[x1_conA;zeros(100,1)],[zeros(100,1);x1_conB],gender]; % omitted constant term because regstats will be used
+design_matrix1 = [[x1_conA;zeros(100,1)],[zeros(100,1);x1_conB],condition]; % omitted constant term because regstats will be used
 design_matrix2 = [x1,condition,x1.*condition];
 
 figure; subplot(1,2,1);imagesc(design_matrix1)
