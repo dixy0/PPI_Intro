@@ -2,6 +2,8 @@
 % psychophysiological interaction (PPI) of functional MRI (fMRI) data
 % Author: Xin Di, PhD
 
+clear
+
 % Part 1 simple correlation
 % Generate simulated variables
 x_common = randn(100,1);  % A common signal that give rises to correlation

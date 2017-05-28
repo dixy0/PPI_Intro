@@ -2,6 +2,8 @@
 % psychophysiological interaction (PPI) of functional MRI (fMRI) data
 % Author: Xin Di, PhD
 
+clear
+
 % Part 1 correlation differences among three conditions
 % There are three conditions: A, B, and R.
 % There is only correlation between x1 and x2 in condition A
