@@ -22,8 +22,8 @@ end
 
 figure;
 subplot(2,3,1); imagesc(x_psy1); colormap('gray'); xticks([1 2]); xticklabels({'A_1','B_1'})
-subplot(2,3,2); plot(mean_A,Beta1_A,'.'); xlabel('mean(B)'); ylabel('beta_A_1');
+subplot(2,3,2); plot(mean_A,Beta1_A,'.'); xlabel('mean(A)'); ylabel('beta_A_1');
 subplot(2,3,3); plot(mean_B,Beta1_A,'.'); xlabel('mean(B)'); ylabel('beta_A_1');
 subplot(2,3,4); imagesc(x_psy2); colormap('gray'); xticks([1 2]); xticklabels({'A_2','B_2'})
-subplot(2,3,5); plot(mean_A,Beta2_A,'.'); xlabel('mean(B)'); ylabel('beta_A_2');
+subplot(2,3,5); plot(mean_A,Beta2_A,'.'); xlabel('mean(A)'); ylabel('beta_A_2');
 subplot(2,3,6); plot(mean_B,Beta2_A,'.'); xlabel('mean(B)'); ylabel('beta_A_2');
