@@ -27,7 +27,7 @@ for permi = 1:permn
 end
 
 figure;
-subplot(2,3,1); imagesc(glm1); colormap('gray'); xticks([1 2 3 4]); xticklabels({'A_1','B_1','PPI_A_1','PPI_1'})
+subplot(2,3,1); imagesc(glm1); colormap('gray'); xticks([1 2 3 4]); xticklabels({'A_1','B_1','PPI_A_1','PPI_B_1'})
 subplot(2,3,2); plot(corr_A,Beta1_PPI_A,'.'); xlabel('corr(A)'); ylabel('beta_P_P_I_A_1');
 subplot(2,3,3); plot(corr_B,Beta1_PPI_A,'.'); xlabel('corr(B)'); ylabel('beta_P_P_I_A_1');
 subplot(2,3,4); imagesc(glm2); colormap('gray'); xticks([1 2 3 4]); xticklabels({'A_2','B_2','PPI_A_2','PPI_B_2'})
