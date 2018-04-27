@@ -28,8 +28,8 @@ end
 
 figure;
 subplot(2,3,1); imagesc(glm1); colormap('gray'); xticks([1 2 3 4]); xticklabels({'A_1','B_1','PPI_A_1','PPI_B_1'})
-subplot(2,3,2); plot(corr_A,Beta1_PPI_A,'.k'); xlabel('corr(A)'); ylabel('beta_P_P_I_A_1');
-subplot(2,3,3); plot(corr_B,Beta1_PPI_A,'.k'); xlabel('corr(B)'); ylabel('beta_P_P_I_A_1');
+subplot(2,3,2); plot(corr_A,Beta1_PPI_A,'.k'); xlabel('corr(condition 1)'); ylabel('beta_P_P_I_A_1');
+subplot(2,3,3); plot(corr_B,Beta1_PPI_A,'.k'); xlabel('corr(condition 2)'); ylabel('beta_P_P_I_A_1');
 subplot(2,3,4); imagesc(glm2); colormap('gray'); xticks([1 2 3 4]); xticklabels({'A_2','B_2','PPI_A_2','PPI_B_2'})
-subplot(2,3,5); plot(corr_A,Beta2_PPI_A,'.k'); xlabel('corr(A)'); ylabel('beta_P_P_I_A_2');
-subplot(2,3,6); plot(corr_B,Beta2_PPI_A,'.k'); xlabel('corr(B)'); ylabel('beta_P_P_I_A_2');
+subplot(2,3,5); plot(corr_A,Beta2_PPI_A,'.k'); xlabel('corr(condition 1)'); ylabel('beta_P_P_I_A_2');
+subplot(2,3,6); plot(corr_B,Beta2_PPI_A,'.k'); xlabel('corr(condition 2)'); ylabel('beta_P_P_I_A_2');
